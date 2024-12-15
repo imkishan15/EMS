@@ -1,0 +1,110 @@
+<html>
+    <head>
+        <title>Add Employee</title>
+        <style>
+            body{
+                background-color: rgb(5, 0, 59);
+            }
+            .form{
+                border: 5px solid rgb(46, 4, 101);
+                margin: 40px 550px;
+                padding: 10px 30px;
+                background: linear-gradient(rgb(22, 177, 255),rgb(118, 62, 186));
+                color: rgb(11, 13, 54);
+                font-size: 18px;
+                border-radius: 30px;
+                font-size: 20px;
+            }
+           
+            input{
+                color: blue;
+                border-radius: 10px;
+                font-size: 16px;
+                padding: 2px 5px;
+                
+            }
+            button{
+                background-color: blue;
+                color: rgb(255, 255, 255);
+                padding: 12px;
+                font-size: 15px;
+                border-radius: 10px;
+            }
+            *{
+            text-decoration: none;
+        }
+            
+            button:hover{
+                background-color: rgb(16, 13, 151);
+                color: white;
+            }
+
+            /* .hom button{
+                background-color: aqua;
+                color: blue;
+                padding: 15px;
+                border-radius: 10px;
+                font-size: 30px;
+                border: 5px solid blue;
+                text-decoration: none;
+            }
+            
+            .hom button:hover{
+                padding: 20px;
+            } */
+            .input_label{
+                display: inline-flex;
+                
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div class="form">
+            <b>
+            <h1>
+                <center>     
+               Add Employee
+                </center>
+                <br>
+            </h1>
+            <form action="/add" method="post">
+                {% csrf_token %}
+            <label class="input_label" for="fn">First Name: </label>
+            <input type="text" class="input_label" name="first_name" value="{{first_name}}"><br><br>
+
+            <label for="ln">Last Name: </label>
+            <input type="text" name="last_name" value="{{last_name}}"><br><br>
+
+            <label for="department">Department: </label>
+            <input type="text" name="dept" value="{{dept}}"><br><br>
+
+            <label for="salary">Salary: </label>
+            <input type="number" name="salary" value="{{salary}}"> <br><br>
+           
+            <label for="bonus">Bonus: </label>
+            <input type="number" name="bonus" value="{{bonus}}"> <br> <br>
+
+            <label for="phone">Phone No.: </label>
+            <input type="number" name="phone" value="{{phone}}"> <br> <br>
+
+            <label for="role">Role: </label>
+            <input type="text" name="role" value="{{role}}"> <br> <br> 
+
+            
+                <center>
+                   <button type="submit"><b>Add Employee</b></button>
+                </center>
+                
+            </b>
+            </form>
+        </div> 
+        <div class="hom">
+        <center>
+            <button>
+                <a href="/hom" style="color: white;">Home</a>
+            </button>
+        </center>
+        </div>    
+    </body>
+    </html>

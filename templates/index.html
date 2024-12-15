@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <style>
+        
+        .bg_img{
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 80%;
+            margin-left: -768px;
+            margin-top: -25px;
+        }
+        .btn{
+            /* background-color: blue; */
+            border: 5px solid aqua;
+            margin: 20px 600px;
+            border-radius: 20px;
+            color: aqua;
+            font-size: 20px;
+            padding: 10px;
+        }
+        .btn:hover{
+            /* background-color: rgb(151, 101, 222); */
+            color: rgb(4, 4, 114);
+            padding: 10px 20px;
+            
+        }
+
+        button{
+            background-color: blue;
+                color: aqua;
+                padding: 15px;
+                border-radius: 10px;
+                font-size: 20px;
+                border: 5px solid aqua;
+                text-decoration: none;
+                font-weight: bold;
+        }
+        button:hover{
+            padding: 15px 20px;
+            background: red;
+            border: 5px solid blue;
+
+        }
+            
+        
+
+        *{
+            text-decoration: none;
+            cursor: default;
+            /* background-image: url('static/img/bg1.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover; */
+            background: #3b2399;
+        }
+        h1{
+            font-size: 40px;
+            color: rgb(7, 7, 79);
+        }
+        h2{
+            font-size: 30px;
+            color: rgb(7, 7, 79);
+
+        }
+
+    </style>
+</head>
+<body>
+   <center>
+       
+ 
+        {% if user.is_authenticated %}
+        <h2> <br> <br>
+            Hello {{ fname}} 
+        </h2>
+        {% endif %}
+       <b>
+    <h1>
+         Masscom Corp Employee Details <br> <br>
+    </h1>
+    <div class="btn">
+        <a href="/view" style="color: aqua;">
+            View All Employee
+        </a>
+    </div>
+    <div class="btn">   
+        <a href="/add" style="color: aqua;">
+            Add Employee
+        </a>
+    </div>
+    <div class="btn">
+        <a href="/remove" style="color: aqua;">
+        Remove Employee
+    </a>
+    </div>
+    <div class="btn">
+        <a href="/filter" style="color: aqua;">
+        Filter Employee
+    </a>
+    </div>  
+    </b><br><br>
+    <a href="/signout" style="color: aqua;">
+    <button> 
+        Log out
+    </button></a>
+   </center>
+</body>
+</html>

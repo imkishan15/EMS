@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            background-image: url('/static/bg.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+
+        }
+
+        .bg_img {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 80%;
+            margin-left: -770px;
+        }
+
+        button {
+            background-color: blue;
+            border: 5px solid aqua;
+            margin: 20px 400px;
+            border-radius: 20px;
+            color: aqua;
+            font-size: 25px;
+            padding: 20px 25px;
+        }
+
+        button:hover {
+            padding: 20px 30px;
+        }
+
+        h1 {
+            font-weight: bold;
+            font-size: 40px;
+            color: rgb(6, 18, 88);
+        }
+    </style>
+</head>
+
+<body>
+
+    <center>
+      
+        <h1><br>
+            <img src="/static/logo.jpg" alt="logo" height="80px" width="100px"> <br>
+            <br> Welcome to Masscom Corp!!!
+            <br>
+            <br><br>
+        </h1>
+        <button>
+            <a href="/signin" style="color: aqua;">Log in</a>
+        </button> <br>
+        <button>
+            <a href="/signup" style="color: aqua;">Sign up</a>
+        </button>
+
+    </center>
+</body>
+
+</html>

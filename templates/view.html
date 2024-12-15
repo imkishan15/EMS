@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color:  rgb(5, 0, 59);
+             /* background-color:  rgb(101, 118, 195); */
+            color: rgb(35, 167, 177);
+        }
+       .table{
+           color: rgb(17, 10, 64);
+           background: rgb(97, 141, 208);
+           margin: 0px 365px;
+           
+        }
+        button{
+                background-color: blue;
+                color: blue;
+                padding: 10px;
+                border-radius: 10px;
+                font-size: 20px;
+                border: 5px solid blue;
+                text-decoration: none;
+        }
+        *{
+            text-decoration: none;
+        }   
+        button:hover{
+                padding: 10px 15px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1> <br>
+            All Employee Details <br><br><br>
+        </h1>
+        <div class="table">
+            <table border="3" align="center" cellpadding="10" >
+                <tr>
+                    <th>ID</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Department</th>
+                    <th>Salary</th>
+                    <th>Bonus</th>
+                    <th>Role</th>
+                    <th>Phone</th>
+                    <th>Hire Date</th>
+                </tr>
+                {% for emp in emps %}
+                <tr>
+                    <th>{{emp.id}}</th>
+                    <th>{{emp.first_name}}</th>
+                    <th>{{emp.last_name}}</th>
+                    <th>{{emp.dept}}</th>
+                    <th>{{emp.salary}}</th>
+                    <th>{{emp.bonus}}</th>
+                    <th>{{emp.role}}</th>
+                    <th>{{emp.phone}}</th>
+                    <th>{{emp.date}}</th>
+                </tr>
+                {% endfor %}
+            </table>
+        </div><br><br>
+        <button>
+            <a href="/hom" style="color: aqua;">Home</a>
+        </button>
+    </center>
+</body>
+</html>

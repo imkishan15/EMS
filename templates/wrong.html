@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(13, 0, 56);
+            color: rgb(104, 231, 235);
+        }
+        .form{
+            margin: 10px 550px;
+            background-color: aqua;
+            color: blue;
+            font-weight: bold;
+            font-size: 20px;
+            padding: 20px;
+            border: 5px solid blue;
+            border-radius: 20px;
+        }
+        button{
+            background-color: blue;
+            color: aqua;
+            padding: 12px;
+            font-size: 15px;
+            border-radius: 10px;
+        }
+        button:hover{
+            background-color: aqua;
+            color: blue;
+            cursor: pointer;
+        }
+        input{
+            border-radius: 5px;
+            padding: 5px;
+        }
+        .up button{
+            background-color: blue;
+            border: 5px solid aqua;
+            margin: 20px 400px;
+            border-radius: 20px;
+            color: aqua;
+            font-size: 20px;
+            padding: 10px 15px;
+        }
+
+        .up button:hover{
+            padding: 10px 20px;
+        }
+        *{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h2>
+            <br><br>
+            Wrong Credentials!!!
+            <br><br><br>
+        </h2>
+        <h1>
+            <br>
+            Sign in form!!!
+            <br><br><br>
+        </h1>
+        <div class="form">
+            <form action="/signin" method="post"> 
+                {% csrf_token %} <br>
+                <label for="">Username</label>
+                <input type="text" id="user" name="user" placeholder="Enter Username" required><br> <br>
+               
+                <label for="">Password</label>
+                <input type="password" id="ps" name="ps" placeholder="Enter Password" required><br> <br>
+                
+                <center>
+                    <div class="sub">
+                    <button type="submit">Sign in</button>
+                    </div>
+                </center>
+            </form>
+        </div>
+        <h2>
+            <div class="up">
+                <br><br>Haven't sign up yet?<br><br>
+            <button>
+                <a href="/signup" style="color: aqua;">Sign up</a>
+            </button>
+            </div>
+        </h2>
+    
+    </center>
+</body>
+</html>

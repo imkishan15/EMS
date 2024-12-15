@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <title>Remove Employee</title>
+        <style>
+            body{
+                background-color: rgb(5,0,59);
+                color: aliceblue;
+            }
+            .table{
+                background: rgb(42, 6, 89);
+                color: rgb(186, 194, 202);
+            }
+            .form{
+                border: 5px solid rgb(46, 4, 101);
+                margin: 100px 550px;
+                padding: 10px 30px;
+                background-color: rgb(137, 169, 240);
+                color: rgb(57, 9, 203);
+                font-size: 18px;
+                border-radius: 30px;
+                font-size: 20px;
+            }
+            button{
+                background-color: blue;
+                color: aqua;
+                padding: 5px;
+                border-radius: 10px;
+            }
+            
+            button:hover{
+                background-color: aqua;
+                color: blue;
+            }
+
+            .hom button{
+                background-color: blue;
+                color: aqua;
+                padding: 10px;
+                border-radius: 10px;
+                font-size: 15px;
+            }
+            
+            .hom button:hover{
+                padding: 10px 15px;
+            }
+
+            *{
+            text-decoration: none;
+        }
+       
+
+        </style>
+    </head>
+    <body>
+        <div class="form">
+            <b>
+            <h1>
+                <center>     
+               Remove Employee
+                </center>
+                
+            </h1>
+    
+            <div class="table">
+                <table border="1" align="center" cellpadding="10">
+                    <tr>
+                        <th>No.</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th></th>
+                    </tr>
+                    {% for emp in emps %}
+                    <tr>
+                        <th>{{emp.id}}</th>
+                        <th>{{emp.first_name}}</th>
+                        <th>{{emp.last_name}}</th>
+                        <th><a href="/remove/{{emp.id}}" style="color: blue;"><button>Remove</button></a></th>
+                    </tr>
+                    {% endfor %}
+                </table>
+                
+            </b>
+            </div> <br><br> 
+            <div class="hom">
+                <center>
+                    <button>
+                        <a href="/hom" style="color: aqua;">Home</a>
+                    </button>
+                </center>
+                </div> 
+    </body>
+    </html>

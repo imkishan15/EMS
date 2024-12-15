@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(13, 0, 56);
+            color: rgb(104, 231, 235);
+        }
+        .form{
+            margin: 10px 550px;
+            background: linear-gradient(rgb(22, 177, 255),rgb(54, 54, 181));
+            color: rgb(0, 0, 91);
+            font-weight: bold;
+            font-size: 20px;
+            padding: 20px;
+            border: 5px solid blue;
+            border-radius: 20px;
+        }
+        button{
+            background-color: blue;
+            color: aqua;
+            padding: 12px;
+            font-size: 15px;
+            border-radius: 10px;
+        }
+        button:hover{
+            background-color: aqua;
+            color: blue;
+            cursor: pointer;
+        }
+        input{
+            border-radius: 5px;
+            padding: 5px;
+        }
+        .up button{
+            background-color: blue;
+            border: 5px solid aqua;
+            margin: 20px 400px;
+            border-radius: 20px;
+            color: aqua;
+            font-size: 20px;
+            padding: 10px 15px;
+        }
+
+        .up button:hover{
+            padding: 10px 20px;
+        }
+        
+        *{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        {% for message in messages %}
+        <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+            <strong>Message:</strong> {{ message }}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+        </div>
+        {% endfor %}
+        <h1>
+            <br>
+            Sign up form!!!
+            <br><br>
+        </h1>
+    <div class="form">
+        
+        <form action="/signup" method="post"> 
+            {% csrf_token %} <br>
+            <label for="">Username</label>
+            <input type="text" id="user" name="user" placeholder="Enter Username" required><br> <br>
+            <label for="">First Name</label>
+            <input type="text" id="fn" name="fn" placeholder="Enter First Name" required><br> <br>
+            <label for="">Last Name</label>
+            <input type="text" id="ln" name="ln" placeholder="Enter Last Name" required><br> <br>
+            <label for="">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="Enter E-mail Address" required><br> <br>
+            <label for="">Password</label>
+            <input type="password" id="ps1" name="ps1" placeholder="Enter Password" required><br> <br>
+            <label for="">Confirm Password</label>
+            <input type="password" id="ps2" name="ps2" placeholder="Confirm Your Password" required><br> <br>
+            <center>
+                
+                <button type="submit">Sign up</button>
+                
+            </center>
+        </form>
+    </div>
+    <div class="up">
+        <h2>
+            <br>Already sign up?<br>
+    <button>
+        <a href="/signin" style="color: aqua;">Sign in</a>
+    </button>
+        </h2>
+    </div>
+    </center>
+</body>
+</html>
